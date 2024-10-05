@@ -9,7 +9,7 @@ Ntrainpoints: 5000
 Ntestpoints: 1000
 number_of_noisy_obs: 5
 
-# model.py: 모델 설계에 들어가는 파라미터
+# model.py: 모델 초기화에 들어가는 파라미터
 # =======================================
 lstm_size: 128
 latent_size: 20
@@ -23,6 +23,7 @@ directions: 2
 
 # main.py: 모델 사용에 들어가는 파라미터
 # =======================================
+train: True
 optimizer_choice: 'AdamW'
 learning_rate: 1e-2
 epochs: 8
@@ -30,8 +31,6 @@ lambda_kl: 0
 
 # Not Used Yet
 # =======================================
-print_every: 1 #lower value, more often test/train loss print. Based on epoch
-print_interval: 2
 lambda_max: 1
 lambda_update_rate: 0.1
 save_bad_img: "No" #Yes

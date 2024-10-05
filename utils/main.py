@@ -33,28 +33,46 @@ def load_yaml_config(config_path: str) -> dict:
     return config
 
 ## TODO 1 =============================================================
-## (1.1) 모든 메소드의 입력값, 출력값에 대한 타이핑 추가하기. (model.py 주석 참고.)
+## 모든 메소드의 입력값, 출력값에 대한 타이핑 추가하기. (model.py 주석 참고.)
 ## def example_method(number: int,
 ##                    string: str
 ##                    data  : dict) -> float:
 
-## (1.2) 모든 메소드 입력값에 맞춰서 구현해놓기 (깃허브 참고)
+## 모든 메소드 입력값에 맞춰서 구현해놓기 (깃허브 참고)
 ## 필요하면 언제든지 수정할 수 있게 주석 상세하게 추가하기.
 ## 주어진 환경에서 돌아갈 수 있는 코드인지 스스로 확인.
 
 def loss_function(recon_x, x, mu, logvar,lamb, mu_att, logvar_att):
+    """
+    깃허브 참고
+    """
     pass
 
 def get_batches(iterable, batch_size):
+    """
+    깃허브 참고
+    """
     pass
 
 def train(epoch,lambda_kl):
+    """
+    깃허브 참고
+    """
     pass
 
 def test(epoch,lambda_kl):
+    """
+    깃허브 참고
+    """
     pass
 
-def save():
+def save(config, ...):
+    """
+    모델 훈련, 테스트 후에는 output 디렉토리 아래에 사용한 데이터셋의
+    기기명, 데이터 수집 기간, 피더 번호, 태그명 별로 디렉토리를 생성합니다.
+    모델 훈련 후에는 가중치 체크포인트 파일과 사용한 config 옵션을 저장합니다.
+    모델 테스트 후에는 이상치 값들과 시각화 이미지를 저장합니다.
+    """
     pass
 ## =================================================================
 
@@ -64,7 +82,10 @@ if __name__ == '__main__':
     args = parse_args()
 
     ## Set up Logger
-    log_file_path = 'logging.log'
+    ## TODO 2 ==========================================================
+    ## log_file_path를 save 메소드에서 사용할 디렉토리로 올바르게 배정해줘야겠죠?
+    ## =================================================================
+    log_file_path = '...'
     setup_logging(log_file_path)
 
     ## Set Device
@@ -81,6 +102,13 @@ if __name__ == '__main__':
     ## Load config.yaml
     config = load_yaml_config(args.config)
     logging.info("Configuration file loaded successfully.")
+
+    ## Set train/test mode
+    train = config['train']
+    if train:
+        logging.info("Train mode.")
+    else:
+        logging.info("Test mode.")
 
     ## Assign hyperparameters from config
     optimizer_choice = config['optimizer_choice']
@@ -108,5 +136,6 @@ if __name__ == '__main__':
         logging.info("Using Adam optimizer.")
     assert optimizer_choice in ['AdamW', 'SGD', 'Adam']
 
-    ## TODO 2: 
+    ## TODO 3 ==========================================================
+    ## 위에 메소드 작성 끝나면 그거 사용해서 알아서 채워넣기 ㅋ
     ## =================================================================

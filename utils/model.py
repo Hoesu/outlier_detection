@@ -32,6 +32,7 @@ class VAE(nn.Module):
         self.num_layers = config['num_lyears']
         self.directions = config['directions']
         self.sample_reps = config['sample_reps']
+        self.training = config['train']
         self.batch_norm = nn.BatchNorm1d(self.input_size)
         self.softmax = nn.Softmax(dim=0)
         self.SoftP=nn.Softplus()
