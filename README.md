@@ -4,7 +4,7 @@
 "Unsupervised Anomaly Detection in Energy Time Series Data Using Variational Recurrent Autoencoders with Attention" 논문 기반 이상치 탐지 프로젝트.
 
 
-## Environment
+## Environment
 아나콘다 가상환경 생성
 ```bash
   conda create -n outlier python=3.11
