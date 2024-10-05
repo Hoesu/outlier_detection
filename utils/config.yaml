@@ -1,16 +1,16 @@
-# Data parameters
-# ==================================
+# dataset.py: 데이터셋 불러오기에 사용되는 파라미터
+# =======================================
+name: ""
 tag: "tag_name"
 mode: "online"
 standardize: True
 file_num: 1000
-
 Ntrainpoints: 5000
 Ntestpoints: 1000
 number_of_noisy_obs: 5
 
-# Model parameters
-# ==================================
+# model.py: 모델 설계에 들어가는 파라미터
+# =======================================
 lstm_size: 128
 latent_size: 20
 input_size: 2 
@@ -21,15 +21,18 @@ attention_size: 2
 sample_reps: 20
 directions: 2
 
-# Not Used Yet
-# ==================================
-print_every: 1 #lower value, more often test/train loss print. Based on epoch
+# main.py: 모델 사용에 들어가는 파라미터
+# =======================================
+optimizer_choice: 'AdamW'
 learning_rate: 1e-2
-print_interval: 2
 epochs: 8
-lambda_kl: 0 #tune the prior? fit data vs. fit prior. Prior is zero mean gussian. try to set it to 0
+lambda_kl: 0
+
+# Not Used Yet
+# =======================================
+print_every: 1 #lower value, more often test/train loss print. Based on epoch
+print_interval: 2
 lambda_max: 1
 lambda_update_rate: 0.1
-optimizer_choice: 'AdamW' #AdamW , #SGD
 save_bad_img: "No" #Yes
 eta: 0.01
