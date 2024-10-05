@@ -23,15 +23,15 @@ class VAE(nn.Module):
         """
         super(VAE, self).__init__()
         self.config = config
-        self.seq_size = config.seq_size
-        self.lstm_size = config.lstm_size
-        self.latent_size = config.latent_size
-        self.attention_size = config.attention_size
-        self.input_size = config.input_size
-        self.batch_size = config.batch_size
-        self.num_layers = config.num_lyears
-        self.directions = config.directions
-        self.sample_reps = config.sample_reps
+        self.seq_size = config['seq_size']
+        self.lstm_size = config['lstm_size']
+        self.latent_size = config['latent_size']
+        self.attention_size = config['attention_size']
+        self.input_size = config['input_size']
+        self.batch_size = config['batch_size']
+        self.num_layers = config['num_lyears']
+        self.directions = config['directions']
+        self.sample_reps = config['sample_reps']
         self.batch_norm = nn.BatchNorm1d(self.input_size)
         self.softmax = nn.Softmax(dim=0)
         self.SoftP=nn.Softplus()
