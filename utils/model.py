@@ -8,18 +8,18 @@ class VAE(nn.Module):
         Method: __init__(self,config)
         - Purpose: constructor for initializing VAE.
         - Attributes:
-		        - self.seq_size: number of time steps.                    (INPUT)
-		        - self.batch_size: batch size.                            (INPUT)
-    		    - self.input_size: number of features in the input.       (LSTM)
-    		    - self.lstm_size: number of features in the hidden state. (LSTM)
-    		    - self.num_layers: number of recurrent layers.            (LSTM)
-    		    - self.directions: number of LSTM directions.             (LSTM)
-    		    - self.latent_size: latent space size.                    (VAE)
-                - self.attention_size: latent space size.                 (VSAM)
-                - self.sample_rep: number of sampling from latent space.  (INFERENCE)
-		        - self.batch_norm: 1d batch normalization.
-		        - self.softmax: softmax activation function.
-		        - self.SoftP: softplus activation function.
+            - self.seq_size: number of time steps.                    (INPUT)
+            - self.batch_size: batch size.                            (INPUT)
+            - self.input_size: number of features in the input.       (LSTM)
+            - self.lstm_size: number of features in the hidden state. (LSTM)
+            - self.num_layers: number of recurrent layers.            (LSTM)
+            - self.directions: number of LSTM directions.             (LSTM)
+            - self.latent_size: latent space size.                    (VAE)
+            - self.attention_size: latent space size.                 (VSAM)
+            - self.sample_rep: number of sampling from latent space.  (INFERENCE)
+            - self.batch_norm: 1d batch normalization.
+            - self.softmax: softmax activation function.
+            - self.SoftP: softplus activation function.
         """
         super(VAE, self).__init__()
         self.config = config
