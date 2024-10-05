@@ -1,5 +1,2 @@
-data/
 output/
-
-data/*
-!data/intervals.json
+*.csv
