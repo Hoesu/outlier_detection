@@ -1,9 +1,9 @@
 # dataset.py: 데이터셋 불러오기에 사용되는 파라미터
 # =======================================
-name: ""
-tag: "tag_name"
-mode: "online"
+data_path: 'data/423_BE1_IZ1/KFEMS.HALLA.01.DC01.IP001_202205_feeder_00_tag_IO_5SEC_MIX_423_BE1_IZ1.csv'
+interval_path: "data/intervals.json"
 standardize: True
+
 file_num: 1000
 Ntrainpoints: 5000
 Ntestpoints: 1000
