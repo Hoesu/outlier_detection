@@ -29,12 +29,8 @@
 ```bash
   pip install -r requirements.txt
 ```
-## Configurations
-```bash
-  TO BE ANNOUNCED.
-```
 
-## Configurations
+## File Structure
 ```bash
 WORKING DIRECTORY
 ├── data                    # Outlier dataset (confidential)
@@ -45,6 +41,11 @@ WORKING DIRECTORY
 │   ├── dataset.py          # Dataset initialization
 │   └── main.py             # Main method
 └── requirements.txt
+```
+
+## Configurations
+```bash
+  TO BE ANNOUNCED.
 ```
 
 ## Deployment
